@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/gpa.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <script src="gpa.js"></script>
+  <title>GPA Calculator</title>
+  <link rel="shortcut icon" href="img/fav.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="" />
+  <meta name="keywords" content=" "/>
+  <meta name="author" content="xoisan">
+  <meta name="robots" content="index, follow" />
+</head>
+<body>
+
+  <div class="card animated fadeIn">
+    <div class="name">
+      GPA Calculator
+   </div>
+   <form>
+    <label>Course Name:</label>
+    <input type="text" id="courseName" placeholder="e.g. Giai Tich">
+    <br>
+    <label>Grade:</label>
+    <input type="text" id="grade" placeholder="e.g. A+, A, B+">
+    <br>
+    <label>Credits:</label>
+    <input type="number" id="credits" placeholder="e.g. 3" min="1">
+    <br>
+    <button type="button" onclick="addCourse()">Add Course</button>
+  </form>
+  <table id="courseList">
+    <thead>
+      <tr>
+        <th>Course Name</th>
+        <th>Grade</th>
+        <th>Credits</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+  <br>
+  <div id="gpa"></div>
+</div>
+
+</body>
+</html>
