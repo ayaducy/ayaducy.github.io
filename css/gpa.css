@@ -17,15 +17,20 @@ th {
 }
 
 button {
-  background-color: #f2f2f2;
-  border: none;
-  padding: 5px 8px;
+  background-color: gainsboro;
+  border: 1px solid #555;
+  border-radius: 20px;
   cursor: pointer;
-  margin-left: 5px;
+  margin: auto;
+  display: block;
 }
 
-.card {
-  line-height: 2;
+#buttonAdd {
+  background-color: gainsboro;
+  border: 2px solid #555;
+  color: white;
+  padding: 8px 32px;
+  text-decoration: none;
 }
 
 #gpa {
@@ -36,4 +41,22 @@ button {
 
 label {
   margin-left: 5px;
+}
+
+input {
+  margin: auto;
+  display: block;
+  width: 65%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  transition: width 0.4s ease-in-out;
+  border-radius: 10px;
+}
+input:focus {
+  width: 80%;
+  border: 3px solid #555;
+}
+.name {
+  padding-bottom: 10px;
 }

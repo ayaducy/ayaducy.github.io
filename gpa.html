@@ -24,16 +24,14 @@
       GPA Calculator
    </div>
    <form>
-    <label>Course Name:</label>
-    <input type="text" id="courseName" placeholder="e.g. Giai Tich">
+    <input type="text" id="courseName" placeholder="Course Name">
     <br>
-    <label>Grade:</label>
-    <input type="text" id="grade" placeholder="e.g. A+, A, B+">
+    <input type="text" id="grade" onkeyup="changeTheColorOfButton()" placeholder="Grade">
     <br>
-    <label>Credits:</label>
-    <input type="number" id="credits" placeholder="e.g. 3" min="1">
+    <input type="number" id="credits" onkeyup="changeTheColorOfButton()" placeholder="Credits" min="1">
     <br>
-    <button type="button" onclick="addCourse()">Add Course</button>
+    <button id="buttonAdd" type="button" onclick="addCourse()"><i class="fa fa-plus-circle"></i></button>
+    <br>
   </form>
   <table id="courseList">
     <thead>
@@ -50,10 +48,6 @@
   <br>
   <div id="gpa"></div>
 </div>
-<br>
-<!--footer-->
-      <footer class="animated fadeIn">
-         &copy; 2022. Xoi San.
-      </footer>
+
 </body>
 </html>
