@@ -29,7 +29,7 @@ button {
   background-color: gainsboro;
   border: 2px solid #555;
   color: white;
-  padding: 8px 32px;
+  padding: 8px 40px;
   text-decoration: none;
 }
 
@@ -46,16 +46,14 @@ label {
 input {
   margin: auto;
   display: block;
-  width: 65%;
+  width: 60%;
   padding: 12px 20px;
   box-sizing: border-box;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
   transition: width 0.4s ease-in-out;
   border-radius: 10px;
 }
 input:focus {
-  width: 80%;
-  border: 3px solid #555;
+  width: 75%;
 }
 .name {
   padding-bottom: 10px;

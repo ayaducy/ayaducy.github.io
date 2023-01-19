@@ -55,8 +55,6 @@ function changeTheColorOfButton() {
   var credits = document.getElementById("credits").value;
   if (grade != "" && credits != "" && credits > 0 && (grade == "A+" || grade == "A" || grade == "B+" || grade == "B" || grade == "C+" || grade == "C" ||grade == "D+" || grade == "D" || grade == "F")) {
      document.getElementById("buttonAdd").style.background = "green";
-     document.getElementById("buttonAdd").style.transition = "all 0.4s ease-in-out" ;
-     document.getElementById("buttonAdd").style.width = "20%" ;
   } else {
      document.getElementById("buttonAdd").style.background = "gainsboro";
      document.getElementById("buttonAdd").style.width = "" ;
