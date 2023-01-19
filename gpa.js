@@ -8,8 +8,8 @@ var courseList = [];
 function addCourse() {
 
   var courseName = document.getElementById("courseName").value;
-  var grade = document.getElementById("grade").value;
   var credits = document.getElementById("credits").value;
+  var grade = document.getElementById("grade").value;
 
   // Validate the input
   if (!courseName) courseName = courseList.length + 1;
@@ -29,25 +29,25 @@ function addCourse() {
   var row = table.insertRow(-1);
   var nameCell = row.insertCell(0);
   nameCell.innerHTML = courseName;
-  var gradeCell = row.insertCell(1);
-  gradeCell.innerHTML = grade;
-  var creditsCell = row.insertCell(2);
+  var creditsCell = row.insertCell(1);
   creditsCell.innerHTML = credits;
+  var gradeCell = row.insertCell(2);
+  gradeCell.innerHTML = grade;
   var deleteCell = row.insertCell(3);
   var deleteBtn = document.createElement("button");
+  deleteBtn.setAttribute("id", "buttonDel");
   deleteBtn.innerHTML = "X";
   deleteBtn.onclick = function() {
     deleteCourse(row);
   };
   deleteCell.appendChild(deleteBtn);
-  courseList.push({ name: courseName, grade: grade, credits: credits });
+  courseList.push({ name: courseName, credits: credits, grade: grade });
   document.getElementById("courseList").style.display = "";
   calculateGPA();
   document.getElementById("courseName").value = "";
   document.getElementById("grade").value = "";
   document.getElementById("credits").value = "";
-  document.getElementById("buttonAdd").style.background = "gainsboro";
-  document.getElementById("buttonAdd").style.width = "" ;
+  document.getElementById("buttonAdd").style.background = "";
 }
 
 function changeTheColorOfButton() {
@@ -56,8 +56,7 @@ function changeTheColorOfButton() {
   if (grade != "" && credits != "" && credits > 0 && (grade == "A+" || grade == "A" || grade == "B+" || grade == "B" || grade == "C+" || grade == "C" ||grade == "D+" || grade == "D" || grade == "F")) {
      document.getElementById("buttonAdd").style.background = "green";
   } else {
-     document.getElementById("buttonAdd").style.background = "gainsboro";
-     document.getElementById("buttonAdd").style.width = "" ;
+    document.getElementById("buttonAdd").style.background = "";
   }
 }
 
