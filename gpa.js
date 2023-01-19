@@ -12,7 +12,6 @@ function addCourse() {
   var grade = document.getElementById("grade").value;
 
   // Validate the input
-  if (!courseName) courseName = courseList.length + 1;
   if (!grade || !credits) {
     alert("Please enter grade and credits!");
     return;
@@ -24,6 +23,9 @@ function addCourse() {
   if (!(grade == "A+" || grade == "A" || grade == "B+" || grade == "B" || grade == "C+" || grade == "C" ||grade == "D+" || grade == "D" || grade == "F")) {
     alert("Invalid grade entered for course " + courseName);
     return;
+  }
+  if (!courseName) {
+    courseName = courseList.length + 1;
   }
   var table = document.getElementById("courseList");
   var row = table.insertRow(-1);
@@ -48,6 +50,7 @@ function addCourse() {
   document.getElementById("grade").value = "";
   document.getElementById("credits").value = "";
   document.getElementById("buttonAdd").style.background = "";
+  document.getElementById("buttonAdd").style.color = "";
 }
 
 function changeTheColorOfButton() {
@@ -55,8 +58,10 @@ function changeTheColorOfButton() {
   var credits = document.getElementById("credits").value;
   if (grade != "" && credits != "" && credits > 0 && (grade == "A+" || grade == "A" || grade == "B+" || grade == "B" || grade == "C+" || grade == "C" ||grade == "D+" || grade == "D" || grade == "F")) {
      document.getElementById("buttonAdd").style.background = "green";
+     document.getElementById("buttonAdd").style.color = "white";
   } else {
     document.getElementById("buttonAdd").style.background = "";
+    document.getElementById("buttonAdd").style.color = "";
   }
 }
 
